@@ -1,0 +1,34 @@
+<section class="section-news section">
+  <div class="container">
+    <h2>Новости</h2>
+    <div
+      class="item-news flex-layout"
+      *ngFor="let itemNews of news; let i = index"
+      (click)="toggleContent(itemNews)"
+    >
+      <div class="image-holder">
+        <img src="{{ itemNews.imageMiddle }}" alt="image" />
+      </div>
+      <div class="info-block">
+        <div class="row-data-view flex-layout">
+          <div class="date flex-layout">
+            <mat-icon>today</mat-icon>
+            <span>{{ itemNews.date | date: 'd MMM y, h:mm' }}</span>
+          </div>
+          <div class="view flex-layout">
+            <mat-icon>visibility</mat-icon>
+            <span>{{ itemNews.viewCount }}</span>
+          </div>
+        </div>
+        <h3>{{ itemNews.title }}</h3>
+        <div
+          class="block-content"
+          [@expandAnimation]="itemNews.expanded ? 'expanded' : 'collapsed'"
+        >
+          <p>{{ itemNews.description }}</p>
+        </div>
+        <a [routerLink]="[itemNews.link]">Просмотреть больше</a>
+      </div>
+    </div>
+  </div>
+</section>

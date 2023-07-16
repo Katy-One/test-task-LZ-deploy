@@ -1,0 +1,60 @@
+img {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.wrapper-heading {
+  width: 40%;
+  margin-right: 20px;
+}
+
+.date {
+  display: inline-block;
+}
+
+.slide {
+  background: #f1f1f3;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.image-holder {
+  max-width: 800px;
+  margin-bottom: 15px;
+}
+.slider-info {
+  width: 40%;
+  margin-left: 20px;
+}
+::ng-deep {
+  .owl-stage {
+    background: #f1f1f3;
+  }
+  .owl-theme .owl-nav {
+    margin-top: 0;
+    background: #f1f1f3;
+    padding: 0 0 30px 0;
+  }
+}
+@media (min-width: 769px) {
+  h3 {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-heading,
+  .slider-info {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slide.flex-layout {
+    flex-direction: column;
+  }
+}

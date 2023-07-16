@@ -1,0 +1,22 @@
+<section class="slider-section">
+  <owl-carousel-o [options]="sliderOptions" #owlCarouselModal>
+    <ng-container *ngFor="let slideNews of news">
+      <ng-template carouselSlide [id]="slideNews.ID">
+        <div #slideElement class="slide flex-layout">
+          <div class="wrapper-heading">
+            <h3>{{ slideNews.title }}</h3>
+          </div>
+          <div class="slider-info">
+            <div class="image-holder">
+              <img src="{{ slideNews.imageMiddle }}" alt="image" />
+            </div>
+            <p>{{ slideNews.description }}</p>
+            <span class="date">
+              {{ slideNews.date | date: 'd MMM y, h:mm' }}
+            </span>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</section>

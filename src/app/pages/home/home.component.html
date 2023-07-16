@@ -1,0 +1,7 @@
+<ng-container *ngIf="combinedData$ | async as data">
+  <app-slider [news]="data.lastThreeNews"></app-slider>
+  <ng-container *ngIf="data.news.length">
+    <app-list-news [news]="data.news"></app-list-news>
+    <app-form-add-news (submitEmit)="addNews($event)"></app-form-add-news>
+  </ng-container>
+</ng-container>

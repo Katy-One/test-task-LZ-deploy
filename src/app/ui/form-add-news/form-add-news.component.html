@@ -1,0 +1,20 @@
+<section class="form-section section">
+  <div class="container">
+    <h2>Добавить новую новость</h2>
+    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Заголовок</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Описание</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" [disabled]="!newsForm.valid">
+        Добавить новость
+      </button>
+    </form>
+  </div>
+</section>

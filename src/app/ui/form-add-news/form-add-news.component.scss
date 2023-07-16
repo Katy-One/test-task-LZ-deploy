@@ -1,0 +1,25 @@
+.form-section {
+  background: #f1f1f3;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.mat-mdc-form-field {
+  display: flex;
+}
+
+::ng-deep {
+  .form-section {
+    .mdc-text-field--filled {
+      background: #ffffff;
+    }
+    .mat-mdc-form-field-focus-overlay {
+      background: #ffffff;
+    }
+  }
+}
+button {
+  width: 100%;
+}
